@@ -1,14 +1,19 @@
-# Intelligent-Modelling-for-thyroid-disorder-diagnosis
-This repository contains a Streamlit-based web application designed to detect and classify thyroid disorders from medical images. The system leverages a Deep Neural Network (DNN) enhanced with a Hybrid Meta-Heuristic optimization approach and Long Short-Term Memory (LSTM) architecture for accurate classification.
+This project presents a Streamlit-based web application for detecting and classifying various thyroid disorders using a deep neural network (DNN) model enhanced by Hybrid Meta-Heuristic algorithms and LSTM techniques. It features secure user authentication and an intelligent prediction interface that classifies uploaded medical images and provides spoken and visual feedback.
 
-Features
-User authentication (Sign Up and Login) using SQLite
+## Features
+🔐 User Authentication (Login & Sign Up) using SQLite
 
-Secure password storage and account creation interface
+🧬 Thyroid disorder prediction using a trained DNN + LSTM model
 
-Upload and analysis of thyroid-related medical images
+🖼️ Image preprocessing and segmentation (thresholding)
 
-Classification of six thyroid conditions:
+🗣️ Text-to-speech feedback for predictions (gTTS)
+
+📊 Visualization of original and segmented images
+
+🎨 Custom background and UI styling with embedded media
+
+🧠 Six-class classification:
 
 thyroid_cancer
 
@@ -22,91 +27,61 @@ thyroid_nodule
 
 thyroid_normal
 
-Visual display of original and segmented images
+## Project Structure
 
-Personalized textual medical recommendations based on classification results
-
-Audio output of predictions using text-to-speech (gTTS)
-
-Custom background styling and animation support
-
-Project Structure
-bash
-Copy
-Edit
-thyroid-detection-app/
-├── app.py                # Main Streamlit app for classification and visualization
-├── main.py               # Streamlit app with user registration and login
-├── model.h5              # Pre-trained DNN+LSTM model file
-├── users.db              # SQLite database (created automatically)
+📦thyroid-detection-app/
+├── app.py                # Main prediction logic with Streamlit
+├── main.py               # Entry point for user authentication
+├── model.h5              # Pre-trained DNN+LSTM model
+├── users.db              # SQLite database for users (auto-created)
 ├── Background/
-│   ├── 1.png             # Background image
-│   └── 1.gif             # Home page animation
-├── sample.mp3            # Generated audio output for predictions
+│   └── 1.png             # Background image for UI
+│   └── 1.gif             # Animation displayed on home
+├── sample.mp3            # Generated voice output for prediction
 ├── requirements.txt      # Python dependencies
-└── README.md             # Project documentation
-Installation
-Clone the Repository
+└── README.md             # This file
+🛠️ Installation
 
-bash
-Copy
-Edit
+Clone the repository
+
 git clone https://github.com/yourusername/thyroid-detection-app.git
 cd thyroid-detection-app
-Install the Required Packages
 
-bash
-Copy
-Edit
+Install dependencies
+
 pip install -r requirements.txt
-Add the Model File
-Place your trained model.h5 in the root directory. The model should support classification of the following six categories:
+Add your model
+Place the model.h5 file in the root directory. Make sure it matches the training classes:
+['thyroid_cancer','thyroid_ditis','thyroid_hyper','thyroid_hypo','thyroid_nodule','thyroid_normal']
 
-thyroid_cancer
+Run the app
 
-thyroid_ditis
-
-thyroid_hyper
-
-thyroid_hypo
-
-thyroid_nodule
-
-thyroid_normal
-
-Run the Application
-Launch the main application using:
-
-bash
-Copy
-Edit
 streamlit run main.py
-Usage
-Register a new user account or log in using an existing one.
 
-Upload thyroid medical images through the interface.
+## Sample Usage
+Sign up or log in.
 
-Receive immediate classification results and recommendations.
+Upload thyroid-related medical images.
 
-View both the original and segmented versions of the image.
+View predictions, segmented images, and personalized medical advice.
 
-Listen to the prediction through automatically generated audio.
+Listen to the classification result through generated audio.
 
-Technologies Used
-Frontend: Streamlit
+## Tech Stack
+Frontend/UI: Streamlit, HTML/CSS
 
 Backend: Python, SQLite
 
-Machine Learning Framework: TensorFlow (Keras)
+ML/DL Frameworks: TensorFlow/Keras
 
-Image Processing: OpenCV, Pillow, NumPy
+Others: OpenCV, NumPy, gTTS (Text-to-Speech), Matplotlib, Pillow
 
-Visualization: Matplotlib
-
-Text-to-Speech: gTTS
-
+##  Model Highlights
+The classification model combines DNN with LSTM layers and is optimized using Hybrid Meta-Heuristic techniques to enhance accuracy in medical image classification, especially for thyroid disease detection.
 
 
-Acknowledgements
-This application was developed as part of a research and academic initiative focusing on the application of deep learning in medical image analysis. The integration of hybrid meta-heuristic optimization and LSTM is aimed at enhancing diagnostic performance for thyroid disease classification.
+##  Acknowledgements
+Developed as part of an academic project on medical image diagnosis
+
+Inspired by real-world applications in AI-driven healthcare
 
