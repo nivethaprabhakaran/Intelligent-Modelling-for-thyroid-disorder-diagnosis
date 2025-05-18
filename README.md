@@ -1,87 +1,71 @@
-This project presents a Streamlit-based web application for detecting and classifying various thyroid disorders using a deep neural network (DNN) model enhanced by Hybrid Meta-Heuristic algorithms and LSTM techniques. It features secure user authentication and an intelligent prediction interface that classifies uploaded medical images and provides spoken and visual feedback.
+###Thyroid Disorder Detection and Classification Using Deep CNN
+This project presents an intelligent system for classifying thyroid disorders using deep convolutional neural networks (CNNs). It provides a user-friendly Streamlit web interface and employs DenseNet121 for image-based classification of six types of thyroid conditions.
 
-## Features
-🔐 User Authentication (Login & Sign Up) using SQLite
+##Features
+📂 Image classification across 6 thyroid categories:
 
-🧬 Thyroid disorder prediction using a trained DNN + LSTM model
+Thyroid Cancer
 
-🖼️ Image preprocessing and segmentation (thresholding)
+Thyroiditis
 
-🗣️ Text-to-speech feedback for predictions (gTTS)
+Hyperthyroidism
 
-📊 Visualization of original and segmented images
+Hypothyroidism
 
-🎨 Custom background and UI styling with embedded media
+Thyroid Nodule
 
-🧠 Six-class classification:
+Normal
 
-thyroid_cancer
+🧠 Deep Learning model using DenseNet121
 
-thyroid_ditis
+🖼️ Otsu's method for segmentation
 
-thyroid_hyper
+📊 Performance metrics: Accuracy, Confusion Matrix, and Classification Report
 
-thyroid_hypo
+🗂️ Model training, evaluation, and prediction on custom images
 
-thyroid_nodule
+🌐 Streamlit-based web UI with login/signup
 
-thyroid_normal
+🔐 SQLite-based user authentication system
 
-## Project Structure
+🛠️ Tech Stack
+Python 3.x
 
-📦thyroid-detection-app/
-├── app.py                # Main prediction logic with Streamlit
-├── main.py               # Entry point for user authentication
-├── model.h5              # Pre-trained DNN+LSTM model
-├── users.db              # SQLite database for users (auto-created)
-├── Background/
-│   └── 1.png             # Background image for UI
-│   └── 1.gif             # Animation displayed on home
-├── sample.mp3            # Generated voice output for prediction
-├── requirements.txt      # Python dependencies
-└── README.md             # This file
-🛠️ Installation
+TensorFlow & Keras
 
-Clone the repository
+OpenCV
 
-git clone https://github.com/yourusername/thyroid-detection-app.git
-cd thyroid-detection-app
+Matplotlib
 
-Install dependencies
+Scikit-learn
 
+Streamlit
+
+SQLite
+
+NumPy
+
+📁 Folder Structure
+├── Dataset/
+│   ├── thyroid_cancer/
+│   ├── thyroid_ditis/
+│   └── ...
+├── model.py             # Model building and training
+├── Proposed.py          # Image classification with DenseNet + UI logic
+├── app.py               # Streamlit app with authentication
+├── model.h5             # Trained model
+└── Background/          # Background images and GIFs
+🧪 Getting Started
+1. Clone the repository
+git clone https://github.com/your-username/thyroid-classification.git
+cd thyroid-classification
+2. Install dependencies
 pip install -r requirements.txt
-Add your model
-Place the model.h5 file in the root directory. Make sure it matches the training classes:
-['thyroid_cancer','thyroid_ditis','thyroid_hyper','thyroid_hypo','thyroid_nodule','thyroid_normal']
+3. Run the application
+streamlit run app.py
+📸 Sample Results
+Model Accuracy: ~X% (based on training)
 
-Run the app
+Loss/Accuracy plots generated after training
 
-streamlit run main.py
-
-## Sample Usage
-Sign up or log in.
-
-Upload thyroid-related medical images.
-
-View predictions, segmented images, and personalized medical advice.
-
-Listen to the classification result through generated audio.
-
-## Tech Stack
-Frontend/UI: Streamlit, HTML/CSS
-
-Backend: Python, SQLite
-
-ML/DL Frameworks: TensorFlow/Keras
-
-Others: OpenCV, NumPy, gTTS (Text-to-Speech), Matplotlib, Pillow
-
-##  Model Highlights
-The classification model combines DNN with LSTM layers and is optimized using Hybrid Meta-Heuristic techniques to enhance accuracy in medical image classification, especially for thyroid disease detection.
-
-
-##  Acknowledgements
-Developed as part of an academic project on medical image diagnosis
-
-Inspired by real-world applications in AI-driven healthcare
-
+Real-time prediction on uploaded thyroid images
