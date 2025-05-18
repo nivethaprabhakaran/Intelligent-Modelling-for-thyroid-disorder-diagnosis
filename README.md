@@ -1,4 +1,4 @@
-###Thyroid Disorder Detection and Classification Using Deep CNN
+##Thyroid Disorder Detection and Classification Using Deep CNN
 This project presents an intelligent system for classifying thyroid disorders using deep convolutional neural networks (CNNs). It provides a user-friendly Streamlit web interface and employs DenseNet121 for image-based classification of six types of thyroid conditions.
 
 ##Features
