@@ -18,10 +18,6 @@ Normal
 
 🧠 Deep Learning model using DenseNet121
 
-🖼️ Otsu's method for segmentation
-
-📊 Performance metrics: Accuracy, Confusion Matrix, and Classification Report
-
 🗂️ Model training, evaluation, and prediction on custom images
 
 🌐 Streamlit-based web UI with login/signup
